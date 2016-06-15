@@ -5,9 +5,15 @@
 
 Firmata is a protocol for communicating with microcontrollers from software on a computer (or smartphone/tablet, etc). The protocol can be implemented in firmware on any microcontroller architecture as well as software on any computer software package (see list of client libraries below).
 
+Firmata是与微控制器的软件在电脑上（或智能手机/平板电脑等）进行通信的协议。该协议可以在任何微控制器架构的固件以及任何计算机软件的软件包来实现（见客户端库的名单如下）。
+
 Firmata is based on the [midi message format](http://www.midi.org/techspecs/midimessages.php) in that commands bytes are 8 bits and data bytes are 7 bits. For example the midi Channel Pressure (Command: 0xD0) message is 2 bytes long, in Firmata the Command 0xD0 is used to enable reporting for a digital port (collection of 8 pins). Both the midi and Firmata versions are 2 bytes long, but the meaning is obviously different. In Firmata, the number of bytes in a message must conform with the corresponding midi message. Midi [System Exclusive](http://www.2writers.com/eddie/tutsysex.htm) (Sysex) messages however, can be any length and are therefore used most prominently throughout the Firmata protocol.
 
+Firmata是基于[MIDI消息格式]（http://www.midi.org/techspecs/midimessages.php）,命令字节是8位和数据字节是7位。例如MIDI通道压力（命令：0xD0）消息是2字节长，在Firmata,命令0xD0用于启用用于数字端口（8个管脚集合）的报告。无论是MIDI和Firmata版本是2个字节长，但含义显然是不同的。在Firmata，在一消息字节的数目必须与相应的MIDI消息符合。MIDI [系统专用]（http://www.2writers.com/eddie/tutsysex.htm）（SYSEX）消息然而，可以是任意长度，因此可用于最突出整个Firmata协议。·
+
 This repository contains documentation of the Firmata protocol. The core of the protocol is described in the [protocol.md file](protocol.md) file. Feature-specific documentation is described in individual markdown files ([i2c.md](i2c.md), [stepper.md](stepper.md), [servos.md](servos.md), etc). Files appended with '-proposal' are proposals for new features that have not yet been finalized.
+
+这个库包含Firmata协议文档。协议的核心在[protocol.md文件（protocol.md）文件中描述。
 
 The Firmata protocol could theoretically be implemented for any microcontroller platform. Currently however, the most complete implementation is for [Arduino](http://arduino.cc) (including Arduino-compatible microcontrollers). Here are the known Firmata microcontroller platform implementations:
 
